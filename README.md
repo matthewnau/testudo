@@ -3,7 +3,7 @@ This program allows students who currently attend the University of Maryland, Co
 
 To use testudo, run the file `testudo.py` using Python version 3, and provide the name of the course that you want to see the sections available for. Use the following syntax, and provide that name of the course where it says `<course-name>`.
 
-```
+```Shell
 python3 testudo.py <course-name>
 ```
 Below, example output it shown for when the course name provided is `math140`. Every possible section for the class in the upcoming semester is listed, with an index number in the leftmost section of the window.
@@ -27,3 +27,13 @@ Instead of constantly refreshing the page and hoping the section that you want o
 </p>
 
 Every time that the program checks the registrar, it will ouput a message that details whether the section is currently open or closed, and the date and time of when the check occurred. The GIF above is sped-up, in reality the program checks the registrar about every 35-45 seconds.
+
+## How will I be notified?
+Because third-party notifications such as SMS, Twitter-bots, emails and etc. require API keys, the only included notification system is the command-line output. If you wish to modify `testudo.py` to send you custom alerts when a section has opened up, locate the following snippet of code in the file.
+
+```Python
+'''
+Place custom notification code in this area!
+'''
+```
+Replace the comment with whatever API or custom notification system you have in mind! The code should only be executed inside of the final `if` statement in the `testudo` method.
