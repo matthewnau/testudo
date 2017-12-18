@@ -1,7 +1,20 @@
 # Testudo
-This program allows students who currently attend the University of Maryalnd, College Park to search for course sections on testudo via the command line, and to be notified when a section that was previously closed opens.
+This program allows students who currently attend the University of Maryland, College Park to search for course sections on testudo via the command line, and to be notified when a section that was previously closed opens. Rather than paying [$50](http://umd.thecoursehunter.com/faq.php#accordion) per course on services such as [CourseHunter](http://umd.thecoursehunter.com), testudo provides an open-source alternative.
 
-Rather than paying [$50](http://umd.thecoursehunter.com/faq.php#accordion) per course on services such as [CourseHunter](http://umd.thecoursehunter.com), testudo offers the same functionality for free!
+To use testudo, run the file `testudo.py` using Python version 3, and provide the name of the course that you want to see the sections available for. Use the following syntax, and provide that name of the course where it says `<course-name>`.
+
+```
+python3 testudo.py <course-name>
+```
+Below, example output it shown for when the course name provided is `math140`. Every possible section for the class in the upcoming semester is listed, with an index number in the leftmost section of the window.
+
+<p align="center">
+<img src="https://media.giphy.com/media/3o6fIW5pCWYCSQIHE4/giphy.gif">
+</p>
+
+Once the list of sections offered is returned, the only thing left to do is pick a section. Type in the number of the row containing the section that you want to be notified of as soon as it opens. Hit the enter/return key and wait. The program will stop running and let you know as soon as the section requested becomes available.
+
+It is important to understand that because this program continuously operates, whichever machine it's running on needs to be powered on until you are notified. Otherwise, the program will not be able to notify you if the section becomes available. Also, due to the nature of registering for classes, this is NOT meant to be a substitute for the waitlist. You will always want to get on the course's waitlist if possible. This program is meant to assist you in registering.
 
 ---
 ## How's it work?
